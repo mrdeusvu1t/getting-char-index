@@ -15,6 +15,8 @@ In the task you have to implement six "GetIndexOfChar" methods that should retur
 
 The implementation details are described with TODO comments in code files. There are fix "GetLastIndexOfChar" method that you can use as examples. Analyze these methods and run unit tests for them before starting implementing methods you have to implement.
 
+It's allowed to use [String.Length](https://docs.microsoft.com/en-us/dotnet/api/system.string.length) and [String.Chars](https://docs.microsoft.com/en-us/dotnet/api/system.string.chars) properties only for solving the task. You are not allowed to use other static or instance methods of the [String class](https://docs.microsoft.com/en-us/dotnet/api/system.string) or any extension method from [System.Linq namespace](https://docs.microsoft.com/en-us/dotnet/api/system.linq).
+
 1. Analyze the implementation of the "GetLastIndexOfChar(string, char)" method in the [ForMethods.cs](GettingCharIndex/ForMethods.cs) file. Implement "GetIndexOfChar(string, char)" static method. See TODO #1.
 1. Analyze the implementation of the "GetLastIndexOfChar(string, char, int, int)" method in the [ForMethods.cs](GettingCharIndex/ForMethods.cs) file. Implement "GetIndexOfChar(string, char, int, int)" static method. See TODO #2.
 1. Analyze the implementation of the "GetLastIndexOfChar(string, char)" method in the [WhileMethods.cs](GettingCharIndex/WhileMethods.cs) file. Implement "GetIndexOfChar(string, char)" static method. See TODO #3.
