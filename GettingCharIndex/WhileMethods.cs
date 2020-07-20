@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace LoopsIndexOfChar
+namespace GettingCharIndex
 {
     public static class WhileMethods
     {

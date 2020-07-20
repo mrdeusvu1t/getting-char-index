@@ -4,7 +4,7 @@ using NUnit.Framework;
 // ReSharper disable StringLiteralTypo
 #pragma warning disable CA1707
 
-namespace LoopsIndexOfChar.Tests
+namespace GettingCharIndex.Tests
 {
     [TestFixture]
     public sealed class ForMethodsTests
@@ -12,6 +12,7 @@ namespace LoopsIndexOfChar.Tests
         [Test]
         public void GetIndexOfChar_NullString_ThrowsException()
         {
+            // Act
             Assert.Throws<ArgumentNullException>(() => ForMethods.GetIndexOfChar(null, 'a'));
         }
 
@@ -25,30 +26,35 @@ namespace LoopsIndexOfChar.Tests
         [TestCase("abcefghijklmnoprstquvwxyzabcefghijklmnoprstquvwxyz", 'd', ExpectedResult = -1)]
         public int GetIndexOfChar_NonEmptyString_ReturnsPosition(string str, char value)
         {
+            // Act
             return ForMethods.GetIndexOfChar(str, value);
         }
 
         [Test]
         public void GetIndexOfCharStartIndexCount_NullString_ThrowsException()
         {
+            // Act
             Assert.Throws<ArgumentNullException>(() => ForMethods.GetIndexOfChar(null, 'a', 0, 0));
         }
 
         [Test]
         public void GetIndexOfCharStartIndexCount_StartIndexLessZero_ThrowsException()
         {
+            // Act
             Assert.Throws<ArgumentOutOfRangeException>(() => ForMethods.GetIndexOfChar(string.Empty, 'a', -1, 0));
         }
 
         [Test]
         public void GetIndexOfCharStartIndexCount_StartIndexGreaterStringLength_ThrowsException()
         {
+            // Act
             Assert.Throws<ArgumentOutOfRangeException>(() => ForMethods.GetIndexOfChar(string.Empty, 'a', 1, 0));
         }
 
         [Test]
         public void GetIndexOfCharStartIndexCount_CountLessZero_ThrowsException()
         {
+            // Act
             Assert.Throws<ArgumentOutOfRangeException>(() => ForMethods.GetIndexOfChar(string.Empty, 'a', 0, -1));
         }
 
@@ -74,6 +80,7 @@ namespace LoopsIndexOfChar.Tests
         [TestCase("abcefghijklmnoprstquvwxyzabcefghijklmnoprstquvwxyz", 'd', 0, 50, ExpectedResult = -1)]
         public int GetIndexOfChar_NonEmptyString_ReturnsPosition2(string str, char value, int startIndex, int count)
         {
+            // Act
             return ForMethods.GetIndexOfChar(str, value, startIndex, count);
         }
 
@@ -93,30 +100,35 @@ namespace LoopsIndexOfChar.Tests
         [TestCase("abcefghijklmnoprstquvwxyzabcefghijklmnoprstquvwxyz", 'd', ExpectedResult = -1)]
         public int GetLastIndexOfChar_NonEmptyString_ReturnsPosition(string str, char value)
         {
+            // Act
             return ForMethods.GetLastIndexOfChar(str, value);
         }
 
         [Test]
         public void GetLastIndexOfCharStartIndexCount_NullString_ThrowsException()
         {
+            // Act
             Assert.Throws<ArgumentNullException>(() => ForMethods.GetLastIndexOfChar(null, 'a', 0, 0));
         }
 
         [Test]
         public void GetLastIndexOfCharStartIndexCount_StartIndexLessZero_ThrowsException()
         {
+            // Act
             Assert.Throws<ArgumentOutOfRangeException>(() => ForMethods.GetLastIndexOfChar(string.Empty, 'a', -1, 0));
         }
 
         [Test]
         public void GetLastIndexOfCharStartIndexCount_StartIndexGreaterStringLength_ThrowsException()
         {
+            // Act
             Assert.Throws<ArgumentOutOfRangeException>(() => ForMethods.GetLastIndexOfChar(string.Empty, 'a', 1, 0));
         }
 
         [Test]
         public void GetLastIndexOfCharStartIndexCount_CountLessZero_ThrowsException()
         {
+            // Act
             Assert.Throws<ArgumentOutOfRangeException>(() => ForMethods.GetLastIndexOfChar(string.Empty, 'a', 0, -1));
         }
 
@@ -141,6 +153,7 @@ namespace LoopsIndexOfChar.Tests
         [TestCase("abcefghijklmnoprstquvwxyzabcefghijklmnoprstquvwxyz", 'd', 0, 50, ExpectedResult = -1)]
         public int GetLastIndexOfCharStartIndexCount_NonEmptyString_ReturnsPosition(string str, char value, int startIndex, int count)
         {
+            // Act
             return ForMethods.GetLastIndexOfChar(str, value, startIndex, count);
         }
     }
